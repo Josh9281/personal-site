@@ -29,10 +29,10 @@ export function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 px-10">
+    <div className="min-h-screen pt-32 px-10 max-md:px-5">
       <div className="max-w-[900px] mx-auto">
         <h1
-          className="mb-12"
+          className="page-h1 mb-12"
           style={{
             fontFamily: 'var(--font-serif)',
             fontSize: '48px',
@@ -43,7 +43,7 @@ export function AboutPage() {
         </h1>
 
         <div
-          className="space-y-6 mb-20"
+          className="body-copy space-y-6 mb-20"
           style={{
             fontFamily: 'var(--font-serif)',
             fontSize: '17px',
@@ -71,7 +71,7 @@ export function AboutPage() {
         {/* Interests */}
         <section className="mb-20">
           <h2
-            className="italic mb-8"
+            className="section-h2 italic mb-8"
             style={{
               fontFamily: 'var(--font-serif)',
               fontSize: '36px',
@@ -91,7 +91,7 @@ export function AboutPage() {
                 }}
               >
                 <div
-                  className="mb-1"
+                  className="interest-name mb-1"
                   style={{
                     fontFamily: 'var(--font-serif)',
                     fontSize: '20px',
@@ -116,7 +116,7 @@ export function AboutPage() {
 
         {/* Info Grid */}
         <section>
-          <div className="grid grid-cols-2 gap-x-16 gap-y-8">
+          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-x-16 gap-y-8">
             <div>
               <div
                 className="uppercase tracking-widest mb-2"

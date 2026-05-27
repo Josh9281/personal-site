@@ -9,10 +9,10 @@ export function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 px-10">
+    <div className="min-h-screen pt-32 px-10 max-md:px-5">
       <div className="max-w-[900px] mx-auto">
         <h1
-          className="mb-2"
+          className="page-h1 mb-2"
           style={{
             fontFamily: 'var(--font-serif)',
             fontSize: '48px',
@@ -23,7 +23,7 @@ export function ContactPage() {
           Let's grab coffee
         </h1>
         <h2
-          className="italic mb-16"
+          className="page-h1 italic mb-16 max-md:mb-10"
           style={{
             fontFamily: 'var(--font-serif)',
             fontSize: '48px',
@@ -34,7 +34,7 @@ export function ContactPage() {
           or build something.
         </h2>
 
-        <div className="grid grid-cols-2 gap-16">
+        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-16 max-md:gap-10">
           {/* Social Links */}
           <div>
             <div className="space-y-6">

@@ -35,7 +35,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen pt-32">
       {/* Hero Section */}
-      <section className="px-10 pb-20">
+      <section className="px-10 max-md:px-5 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-12 max-w-[1140px] items-stretch">
           <div>
           <p
@@ -51,7 +51,7 @@ export function HomePage() {
           </p>
 
           <h1
-            className="mb-8"
+            className="hero-h1 mb-8"
             style={{
               fontFamily: 'var(--font-serif)',
               fontSize: '64px',
@@ -67,7 +67,7 @@ export function HomePage() {
           </h1>
 
           <div
-            className="space-y-4 mb-8"
+            className="body-copy space-y-4 mb-8"
             style={{
               fontFamily: 'var(--font-serif)',
               fontSize: '17px',
@@ -94,7 +94,7 @@ export function HomePage() {
             </p>
           </div>
 
-          <div className="flex gap-6 mb-12">
+          <div className="flex gap-6 max-md:gap-4 max-md:flex-wrap mb-12">
             {[
               { label: 'writing', href: '/writing' },
               { label: 'projects', href: '/projects' },
@@ -104,7 +104,7 @@ export function HomePage() {
               <a
                 key={link.label}
                 href={link.href}
-                className="underline underline-offset-4 transition-colors hover:text-[#b5856a]"
+                className="hero-link underline underline-offset-4 transition-colors hover:text-[#b5856a]"
                 style={{
                   fontFamily: 'var(--font-serif)',
                   fontSize: '16px'
@@ -117,7 +117,7 @@ export function HomePage() {
 
           {/* Status Bar */}
           <div
-            className="grid grid-cols-3 gap-8 pt-6"
+            className="grid grid-cols-3 gap-8 max-md:grid-cols-1 max-md:gap-4 pt-6"
             style={{ borderTop: '1px solid #e4ddd4' }}
           >
             <div>
@@ -193,9 +193,9 @@ export function HomePage() {
       </section>
 
       {/* Recent Writing */}
-      <section className="px-10 py-20">
+      <section className="px-10 max-md:px-5 py-20 max-md:py-12">
         <h2
-          className="italic mb-8"
+          className="section-h2 italic mb-8"
           style={{
             fontFamily: 'var(--font-serif)',
             fontSize: '36px',
@@ -212,14 +212,14 @@ export function HomePage() {
               href={post.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between py-6 transition-all hover:translate-x-2"
+              className="group flex items-center justify-between gap-4 py-6 transition-all hover:translate-x-2"
               style={{
                 borderTop: index === 0 ? '1px solid #e4ddd4' : 'none',
                 borderBottom: '1px solid #e4ddd4'
               }}
             >
               <div
-                className="w-24"
+                className="w-24 max-md:w-20 shrink-0"
                 style={{
                   fontFamily: 'var(--font-sans)',
                   fontSize: '13px',
@@ -229,7 +229,7 @@ export function HomePage() {
                 {post.date}
               </div>
               <div
-                className="flex-1 text-center transition-all group-hover:italic"
+                className="recent-post-title flex-1 text-center max-md:text-left transition-all group-hover:italic"
                 style={{
                   fontFamily: 'var(--font-serif)',
                   fontSize: '18px',
@@ -238,7 +238,7 @@ export function HomePage() {
               >
                 {post.title}
               </div>
-              <div className="w-24 flex justify-end">
+              <div className="w-24 max-md:w-auto flex justify-end shrink-0">
                 <ArrowUpRight size={18} style={{ color: '#5a5450' }} />
               </div>
             </a>
@@ -247,9 +247,9 @@ export function HomePage() {
       </section>
 
       {/* Selected Projects */}
-      <section className="px-10 py-20">
+      <section className="px-10 max-md:px-5 py-20 max-md:py-12">
         <h2
-          className="italic mb-8"
+          className="section-h2 italic mb-8"
           style={{
             fontFamily: 'var(--font-serif)',
             fontSize: '36px',
@@ -259,7 +259,7 @@ export function HomePage() {
           Selected projects
         </h2>
 
-        <div className="grid grid-cols-2 gap-px bg-[#e4ddd4] max-w-[900px]">
+        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-px bg-[#e4ddd4] max-w-[900px]">
           {projects.map((project) => (
             <a
               key={project.title}
@@ -274,7 +274,7 @@ export function HomePage() {
                 style={{ color: '#5a5450' }}
               />
               <h3
-                className="mb-3 pr-8 transition-all group-hover:italic"
+                className="card-title mb-3 pr-8 transition-all group-hover:italic"
                 style={{
                   fontFamily: 'var(--font-serif)',
                   fontSize: '20px',

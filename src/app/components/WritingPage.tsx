@@ -15,10 +15,10 @@ export function WritingPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 px-10">
+    <div className="min-h-screen pt-32 px-10 max-md:px-5">
       <div className="max-w-[900px] mx-auto">
         <h1
-          className="italic mb-16"
+          className="page-h1 italic mb-16 max-md:mb-10"
           style={{
             fontFamily: 'var(--font-serif)',
             fontSize: '48px',
@@ -38,9 +38,9 @@ export function WritingPage() {
               rel="noopener noreferrer"
               className="block group"
             >
-              <div className="flex items-start gap-6">
+              <div className="flex items-start gap-6 max-md:gap-4">
                 <div
-                  className="w-24 shrink-0 pt-1"
+                  className="w-24 max-md:w-16 shrink-0 pt-1"
                   style={{
                     fontFamily: 'var(--font-sans)',
                     fontSize: '13px',
@@ -51,7 +51,7 @@ export function WritingPage() {
                 </div>
                 <div className="flex-1">
                   <h2
-                    className="mb-2 transition-all group-hover:italic"
+                    className="article-title mb-2 transition-all group-hover:italic"
                     style={{
                       fontFamily: 'var(--font-serif)',
                       fontSize: '24px',

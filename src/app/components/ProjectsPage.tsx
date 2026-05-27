@@ -90,10 +90,10 @@ export function ProjectsPage() {
     : projects.filter(p => p.category.includes(activeTab));
 
   return (
-    <div className="min-h-screen pt-32 px-10">
+    <div className="min-h-screen pt-32 px-10 max-md:px-5">
       <div className="max-w-[1200px] mx-auto">
         <h1
-          className="mb-12"
+          className="page-h1 mb-12"
           style={{
             fontFamily: 'var(--font-serif)',
             fontSize: '48px',
@@ -104,7 +104,7 @@ export function ProjectsPage() {
         </h1>
 
         {/* Tabs */}
-        <div className="flex gap-8 mb-16">
+        <div className="flex gap-8 max-md:gap-4 max-md:flex-wrap mb-16 max-md:mb-10">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -132,7 +132,7 @@ export function ProjectsPage() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 max-md:grid-cols-1 gap-6">
           {filteredProjects.map((project) => {
             const isExternal = project.url.startsWith("http");
             return (
@@ -149,7 +149,7 @@ export function ProjectsPage() {
                   style={{ color: '#5a5450' }}
                 />
                 <h3
-                  className="mb-3 pr-8 transition-all group-hover:italic"
+                  className="card-title mb-3 pr-8 transition-all group-hover:italic"
                   style={{
                     fontFamily: 'var(--font-serif)',
                     fontSize: '20px',

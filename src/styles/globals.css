@@ -1,0 +1,19 @@
+/* Mobile-specific overrides. Desktop (>=768px) is unaffected. */
+@media (max-width: 767px) {
+  /* Navigation */
+  .nav-brand { font-size: 14px !important; }
+  .nav-link { font-size: 12px !important; }
+
+  /* Headings */
+  .hero-h1 { font-size: 40px !important; }
+  .page-h1 { font-size: 32px !important; }
+  .section-h2 { font-size: 26px !important; }
+
+  /* Body / list text */
+  .body-copy { font-size: 15px !important; }
+  .hero-link { font-size: 14px !important; }
+  .recent-post-title { font-size: 15px !important; }
+  .card-title { font-size: 17px !important; }
+  .article-title { font-size: 18px !important; line-height: 1.35 !important; }
+  .interest-name { font-size: 17px !important; }
+}

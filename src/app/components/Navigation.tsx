@@ -12,20 +12,20 @@ export function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-[#faf7f2]/90 border-b border-[#e4ddd4]">
-      <div className="flex items-center justify-between px-10 py-4">
+      <div className="flex items-center justify-between px-10 max-md:px-4 py-4">
         <Link
           to="/"
-          className="transition-colors hover:text-[#b5856a]"
+          className="nav-brand transition-colors hover:text-[#b5856a]"
           style={{ fontFamily: 'var(--font-serif)' }}
         >
           Josh Chang
         </Link>
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-8 max-md:gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
-              className="lowercase tracking-wide transition-colors hover:text-[#b5856a]"
+              className="nav-link lowercase tracking-wide transition-colors hover:text-[#b5856a]"
               style={{
                 fontFamily: 'var(--font-sans)',
                 fontSize: '13px',

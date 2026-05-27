@@ -18,7 +18,7 @@ export function Footer() {
       className="border-t border-[#e4ddd4] mt-20"
       style={{ backgroundColor: '#faf7f2' }}
     >
-      <div className="grid grid-cols-3 items-center px-10 py-6">
+      <div className="grid grid-cols-3 max-md:grid-cols-1 items-center px-10 max-md:px-5 py-6 max-md:gap-3 max-md:text-center">
         <div className="uppercase" style={footerTextStyle}>
           © 2026 Josh Chang
         </div>
@@ -28,7 +28,7 @@ export function Footer() {
         >
           Last updated May 2026
         </div>
-        <div className="flex justify-end gap-6">
+        <div className="flex justify-end max-md:justify-center gap-6 max-md:gap-4 max-md:flex-wrap">
           {socials.map((link) => (
             <a
               key={link.label}
