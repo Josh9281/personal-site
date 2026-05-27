@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import { ArrowUpRight } from "lucide-react";
 
 export function HomePage() {
@@ -96,23 +97,38 @@ export function HomePage() {
 
           <div className="flex gap-6 max-md:gap-4 max-md:flex-wrap mb-12">
             {[
-              { label: 'writing', href: '/writing' },
-              { label: 'projects', href: '/projects' },
-              { label: 'github', href: 'https://github.com/Josh9281' },
-              { label: 'linkedin', href: 'https://www.linkedin.com/in/joshchang928/' },
-            ].map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="hero-link underline underline-offset-4 transition-colors hover:text-[#b5856a]"
-                style={{
-                  fontFamily: 'var(--font-serif)',
-                  fontSize: '16px'
-                }}
-              >
-                {link.label}
-              </a>
-            ))}
+              { label: 'writing', href: '/writing', external: false },
+              { label: 'projects', href: '/projects', external: false },
+              { label: 'github', href: 'https://github.com/Josh9281', external: true },
+              { label: 'linkedin', href: 'https://www.linkedin.com/in/joshchang928/', external: true },
+            ].map((link) => {
+              const className = "hero-link underline underline-offset-4 transition-colors hover:text-[#b5856a]";
+              const style = {
+                fontFamily: 'var(--font-serif)',
+                fontSize: '16px'
+              };
+              return link.external ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                  style={style}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className={className}
+                  style={style}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Status Bar */}
