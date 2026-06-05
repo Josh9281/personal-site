@@ -250,7 +250,7 @@ export function HomePage() {
                 {post.date}
               </div>
               <div
-                className="recent-post-title flex-1 text-center max-md:text-left transition-all group-hover:italic"
+                className="recent-post-title flex-1 text-left transition-all group-hover:italic"
                 style={{
                   fontFamily: 'var(--font-serif)',
                   fontSize: '18px',
