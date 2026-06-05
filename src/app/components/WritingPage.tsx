@@ -3,6 +3,11 @@ import { ArrowUpRight } from "lucide-react";
 export function WritingPage() {
   const articles = [
     {
+      date: "June 2026",
+      title: "We Thought We Were Building the Same Startup",
+      href: "https://medium.com/@joshchang.0928/we-thought-we-were-building-the-same-startup-914fe2837a50",
+    },
+    {
       date: "May 2026",
       title: "What I Learned Turning Blockchain Research Into a Working Prototype",
       href: "https://medium.com/@joshchang.0928/what-i-learned-turning-blockchain-research-into-a-working-prototype-f8f80f7eea93",
